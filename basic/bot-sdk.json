@@ -1,0 +1,17 @@
+{
+  "rooms": {
+    "6ffb597d93d82535ccadd1b42ce46ce63422efd31d4752c5d4af9632db0d2cf28690cf0dd795ef3ad1984fa88ec5d5ec3c229c1549df0ce6f4e43133c2fe25da": {
+      "algorithm": "m.megolm.v1.aes-sha2",
+      "historyVisibility": "shared"
+    },
+    "80edf429d8065d1bcb49f68c11d0062f265b4322d939caab0d5f1ef97c0a2811a1b13a78766e87f5f2a31098ba52fbb2a1d99561ec0e281745e2cfa732402c64": {
+      "algorithm": "m.megolm.v1.aes-sha2",
+      "historyVisibility": "shared"
+    },
+    "b840364c25084c54baefd27382de663f1494cd98f041601c09607702ef062c6389dac92f82593026c08c3052959fe95ba1f13312b6860c498490edb98d4ef052": {
+      "algorithm": "m.megolm.v1.aes-sha2",
+      "historyVisibility": "shared"
+    }
+  },
+  "deviceId": "CIYRHZIMBX"
+}

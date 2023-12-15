@@ -27,16 +27,16 @@ async function detectLang(body: string): Promise<[string, number]> {
 
 export async function translateText(text: string) {
 
-  const source: [string, number] | void = await detectLang(text);
+  // const source: [string, number] | void = await detectLang(text);
 
-  if (!source) {
-    console.error("Source language cannot be detected");
-    return;
-  } 
+  // if (!source) {
+  //   console.error("Source language cannot be detected");
+  //   return;
+  // } 
 
   const params = {
     string: text,
-    from_lang: source[0],
+    from_lang: "auto",
     to_lang: "zh_TW",
   };
 
@@ -44,7 +44,7 @@ export async function translateText(text: string) {
     const response = await axios.get(translator, { params });
     console.log('POST:', response.request.res.responseUrl);
     console.log('Response:', response.data);
-    return response.data; // Assuming you want to return the translated data
+    return response.data[0]; // Assuming you want to return the translated data
   } catch (error) {
     console.error('Error:', error);
     throw error; // Rethrow the error if needed

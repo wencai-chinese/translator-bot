@@ -2,6 +2,7 @@ import {
     MatrixClient,
     SimpleFsStorageProvider,
     AutojoinRoomsMixin,
+    RustSdkCryptoStorageProvider,
 } from "matrix-bot-sdk";
 
 import * as fs from 'fs';
@@ -25,10 +26,13 @@ if (SERVICE === "gcloud") {
 }
 
 let storage: SimpleFsStorageProvider;
+let crypto: RustSdkCryptoStorageProvider;
 
 async function runBot() {
     const homeserverUrl: string | undefined = process.env.BOT_HOMESERVER;
     const accessToken: string | undefined = process.env.BOT_ACCESS_TOKEN;
+    const store: string | undefined = process.env.BOT_STORE;
+    const crypt: string | undefined = process.env.BOT_CRYPT;
 
     if (accessToken === undefined) {
         console.error('BOT_ACCESS_TOKEN is not defined.');
@@ -36,10 +40,18 @@ async function runBot() {
     } else if (homeserverUrl === undefined){
         console.error('BOT_HOMESERVER is not defined.');
         return;
+    } else if (store === undefined){
+        console.error('BOT_STORE is not defined.');
+        return;
+    } else if (crypt === undefined){
+        console.error('BOT_CRYPT is not defined.');
+        return;
     }
 
-    storage = new SimpleFsStorageProvider("basic-bot.json");
-    const client = new MatrixClient(homeserverUrl, accessToken, storage);
+    storage = new SimpleFsStorageProvider(store);
+    console.log()
+    crypto = new RustSdkCryptoStorageProvider(crypt)
+    const client = new MatrixClient(homeserverUrl, accessToken, storage, crypto);
     AutojoinRoomsMixin.setupOnClient(client);
     client.on("room.message", (roomId, event) => handleCommand(client, roomId, event));
 

@@ -13,11 +13,14 @@
   "license": "ISC",
   "dependencies": {
     "@google-cloud/translate": "^8.0.2",
+    "@matrix-org/matrix-sdk-crypto-nodejs": "^0.1.0-beta.11",
     "dotenv": "^16.3.1",
     "esm": "^3.2.25",
     "franc": "^6.1.0",
+    "htmlencode": "^0.0.4",
     "lru-cache": "^10.1.0",
     "matrix-bot-sdk": "^0.7.0",
+    "matrix-js-sdk": "^30.2.0",
     "uuid": "^9.0.1",
     "vorpal": "^1.12.0"
   },
