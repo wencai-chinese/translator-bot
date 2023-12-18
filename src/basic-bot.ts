@@ -7,10 +7,12 @@ import {
 
 import * as fs from 'fs';
 import * as dotenv from 'dotenv';
-import * as gcloud from './gcloud.js';
 import * as gFree from './googleFree.js'
+import * as glFree from './googleLegacyFree.js'
+import * as gcloud from './gcloud.js';
+import * as baidu from './baidu.js'
 
-const SERVICE: string = "gFree"
+const SERVICE: string = "glFree"
 
 // Load environment variables from .env file
 dotenv.config();
@@ -18,11 +20,13 @@ dotenv.config();
 let translateText: Function
 
 if (SERVICE === "gcloud") {
-    translateText = gcloud.translateText
+    translateText = gcloud.translateText;
 } else if (SERVICE === "gFree") {
-    translateText = gFree.translateText
-} else if (SERVICE === "gGoFree") {
-    console.log("go!");
+    translateText = gFree.translateText;
+} else if (SERVICE === "glFree") {
+    translateText = glFree.translateText;
+} else if (SERVICE === "baidu") {
+    translateText = baidu.translateText;
 }
 
 let storage: SimpleFsStorageProvider;
@@ -104,11 +108,12 @@ async function handleCommand(client: MatrixClient, roomId: string, event: any) {
         console.error(`Monthly translation limit ${monthlyLimit} exceeded for ${SERVICE}. Cannot translate.`);
         return;
         }
-    } else {
-        const translated: string = await translateText(body)
-        // console.log(translated)
-        await client.replyNotice(roomId, event, translated);
-    }
+    } 
+
+    const translated: string = await translateText(body)
+    // console.log(translated)
+    await client.replyNotice(roomId, event, translated);
+    
 }
 
 runBot().catch(error => console.error("Error starting bot:", error));
