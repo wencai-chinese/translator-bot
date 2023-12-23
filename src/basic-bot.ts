@@ -8,7 +8,7 @@ import {
 import * as fs from 'fs';
 import * as dotenv from 'dotenv';
 import * as gFree from './googleFree.js'
-import * as glFree from './googleLegacyFree.js'
+import * as gLFree from './googleLegacyFree.js'
 import * as gcloud from './gcloud.js';
 import * as baidu from './baidu.js'
 
@@ -24,7 +24,7 @@ if (SERVICE === "gcloud") {
 } else if (SERVICE === "gFree") {
     translateText = gFree.translateText;
 } else if (SERVICE === "glFree") {
-    translateText = glFree.translateText;
+    translateText = gLFree.translateText;
 } else if (SERVICE === "baidu") {
     translateText = baidu.translateText;
 }
