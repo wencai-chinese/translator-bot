@@ -35,5 +35,3 @@ jobs:
     - name: Run Matrix Bot
       run: node dist/basic-bot.js
 
-    env:
-      GH_TOKEN: ${{ secrets.GH_TOKEN }}
