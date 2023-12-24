@@ -14,7 +14,7 @@
   "license": "ISC",
   "dependencies": {
     "@google-cloud/translate": "^8.0.2",
-    "@types/axios": "^0.24.0",
+    "axios": "^0.24.0",
     "@matrix-org/matrix-sdk-crypto-nodejs": "^0.1.0-beta.11",
     "dotenv": "^16.3.1",
     "esm": "^3.2.25",
@@ -27,6 +27,7 @@
     "vorpal": "^1.12.0"
   },
   "devDependencies": {
-    "@types/google-translate-api": "^2.3.5"
+    "@types/google-translate-api": "^2.3.5",
+    "@types/axios": "^0.21.15"
   }
 }
