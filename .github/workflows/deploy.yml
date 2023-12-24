@@ -8,6 +8,7 @@ on:
 jobs:
   deploy:
     runs-on: ubuntu-latest
+    environment: DeployBot
 
     steps:
     - name: Checkout Repository
@@ -36,9 +37,3 @@ jobs:
 
     env:
       GH_TOKEN: ${{ secrets.GH_TOKEN }}
-      BOT_HOMESERVER: ${{ secrets.BOT_HOMESERVER }}
-      BOT_USERNAME: ${{ secrets.BOT_USERNAME }}
-      BOT_PASSWORD: ${{ secrets.BOT_PASSWORD }}
-      BOT_STORE: ${{ secrets.BOT_STORE }}
-      BOT_CRYPT: ${{ secrets.BOT_CRYPT }}
-      BOT_ACCESS_TOKEN: ${{ secrets.BOT_ACCESS_TOKEN }}
