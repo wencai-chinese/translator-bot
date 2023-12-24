@@ -24,6 +24,13 @@ jobs:
     - name: Build
       run: npm run build
 
+    - name: Obtain BOT-ACCESS-TOKEN
+      id: get_bot_access_token
+      run: node dist/bot-login.js
+
+    - name: Set BOT_ACCESS_TOKEN as a secret
+      run: echo "BOT_ACCESS_TOKEN=${{ env.BOT_ACCESS_TOKEN }}" >> $GITHUB_ENV
+
     - name: Run Matrix Bot
       run: node dist/basic-bot.js
 
