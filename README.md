@@ -2,7 +2,7 @@
 
 A very basic translator bot that will translate everything you say into Chinese. 
 Useful for bilingual communications. 
-Especially powerful when combined with bridges that can port over and synchronize your communications across multiple platforms like [WhatsApp](https://matrix.org/ecosystem/bridges/whatsapp/), [Telegram](https://matrix.org/ecosystem/bridges/telegram/) etc. into matrix.
+Especially powerful when combined with bridges that can port over and synchronize your communications across multiple platforms like [WhatsApp](https://matrix.org/ecosystem/bridges/whatsapp/), [Telegram](https://matrix.org/ecosystem/bridges/telegram/) etc. into Matrix.
 
 ## Usage
 
