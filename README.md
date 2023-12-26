@@ -45,6 +45,8 @@ node dist/basic-bot.js
 
 Start a new workflow with [this file](.github/workflows/deploy.yml) in the repo.
 
+The workflow action will terminate after every 6 hours due to [usage limits](https://docs.github.com/en/actions/learn-github-actions/usage-limits-billing-and-administration#usage-limits) on Github. 
+
 ## Translator Engine
 
 The bot uses a free Goolge Translate legacy service API `gLFree` by default. 
