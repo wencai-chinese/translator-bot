@@ -1,4 +1,4 @@
-# Wencai Translator Bot
+# Translator Bot
 
 A very basic translator bot built with [Matrix Bot SDK](https://turt2live.github.io/matrix-bot-sdk/index.html) that will translate everything you say into Chinese. 
 
