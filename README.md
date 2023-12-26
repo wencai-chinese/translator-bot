@@ -18,13 +18,13 @@ All text posted in the room will be spontaneously translated into Chinese.
 
 1. A matrix account. Get one [for free](https://matrix.org/try-matrix/).
 2. A separate matrix account for the bot.
-3. The following information that *should not* be shared publicly.
-  a. `BOT_HOMESERVER`; information you will have after registering your bot matrix account. 
-  b. `BOT_USERNAME`; information you will have after registering your bot matrix account. 
-  c. `BOT_PASSWORD`; information you will have after registering your bot matrix account. 
-  d. `BOT_STORE`; a json file to store information related to and accessible by the bot.
-  e. `BOT_CRYPT`; a folder to store encryption information. 
-  f. `BOT_ACCESS_TOKEN`; this can be retrieved by running `node dist/bot-login.js` after building the package.
+3. The following information that *should not* be shared publicly.  
+  a. `BOT_HOMESERVER`; information you will have after registering your bot matrix account.  
+  b. `BOT_USERNAME`; information you will have after registering your bot matrix account.  
+  c. `BOT_PASSWORD`; information you will have after registering your bot matrix account.  
+  d. `BOT_STORE`; a json file to store information related to and accessible by the bot. 
+  e. `BOT_CRYPT`; a folder to store encryption information.  
+  f. `BOT_ACCESS_TOKEN`; this can be retrieved by running `node dist/bot-login.js` after building the package. 
 
 When running locally, store the above as environment variables in a `.env` file. 
 When running on Github, store the above as actions [secrets](translator-bot/settings/secrets/actions).
