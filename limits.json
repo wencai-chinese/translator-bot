@@ -1,5 +1,5 @@
 {
-    "_comment": "Character limit pre month before costs are incurred. As at Dec 2023.",
+    "_comment": "Character limit per month before costs are incurred. As at Dec 2023.",
     "gcloud": 500000,
     "baidu": 2000000
 }

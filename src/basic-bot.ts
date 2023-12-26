@@ -62,26 +62,35 @@ async function runBot() {
     console.log("Bot started!");
 }
 
+
 async function tally(body: string) {
-        // Check if the key exists in the storage
-        const storedValue = storage.readValue("translatedChars");
-        if (storedValue !== null && storedValue !== undefined) {
+    // Get the current date
+    const currentDate = new Date();
+    const currentMonth = currentDate.getMonth() + 1; // Months are zero-based, so add 1
+
+    // Construct the key for the current month
+    const currentMonthKey = `translatedChars_${currentMonth}`;
+
+    // Check if the key exists in the storage
+    const storedValue = storage.readValue(currentMonthKey);
+
+    if (storedValue !== null && storedValue !== undefined) {
         // If the key exists, parse the stored value as a number
         const oldLength: number = parseInt(storedValue, 10) || 0;
-        const updatedLength = oldLength + body.length
+        const updatedLength = oldLength + body.length;
 
         // Store the updated value back to the storage
-        storage.storeValue("translatedChars", updatedLength.toString());
+        storage.storeValue(currentMonthKey, updatedLength.toString());
 
         return updatedLength;
-
-        } else {
+    } else {
         // If the key does not exist, create it with the current length
-        storage.storeValue("translatedChars", body.length.toString());
+        storage.storeValue(currentMonthKey, body.length.toString());
 
         return body.length;
-        }
+    }
 }
+
 
 
 async function handleCommand(client: MatrixClient, roomId: string, event: any) {
