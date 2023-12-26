@@ -12,7 +12,7 @@ import * as gLFree from './googleLegacyFree.js'
 import * as gcloud from './gcloud.js';
 import * as baidu from './baidu.js'
 
-const SERVICE: string = "glFree"
+const SERVICE: string = "gLFree"
 
 // Load environment variables from .env file
 dotenv.config();
@@ -23,7 +23,7 @@ if (SERVICE === "gcloud") {
     translateText = gcloud.translateText;
 } else if (SERVICE === "gFree") {
     translateText = gFree.translateText;
-} else if (SERVICE === "glFree") {
+} else if (SERVICE === "gLFree") {
     translateText = gLFree.translateText;
 } else if (SERVICE === "baidu") {
     translateText = baidu.translateText;
@@ -53,7 +53,6 @@ async function runBot() {
     }
 
     storage = new SimpleFsStorageProvider(store);
-    console.log()
     crypto = new RustSdkCryptoStorageProvider(crypt)
     const client = new MatrixClient(homeserverUrl, accessToken, storage, crypto);
     AutojoinRoomsMixin.setupOnClient(client);

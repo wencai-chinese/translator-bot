@@ -131,3 +131,14 @@ dist
 
 # GCP
 src/.pioneering-rex-408011-4bceba53ceda.json
+
+# Crypto Store
+basic/
+crypto/
+
+# Local Bot Data
+basic-bot.json
+crypto-bot.json
+
+# Unrelated to package
+gtranslate/
