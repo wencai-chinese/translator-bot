@@ -2,6 +2,8 @@
 
 A very basic translator bot built with [Matrix Bot SDK](https://turt2live.github.io/matrix-bot-sdk/index.html) that will translate everything you say into Chinese. 
 
+![image](https://github.com/wencai-chinese/translator-bot/assets/152161788/91dd1e21-4746-4c67-a502-a4ede6d8a09c)
+
 Useful for bilingual communications. 
 
 Especially powerful when combined with bridges that can port over and synchronize your communications across multiple platforms like [WhatsApp](https://matrix.org/ecosystem/bridges/whatsapp/), [Telegram](https://matrix.org/ecosystem/bridges/telegram/) etc. into Matrix.
