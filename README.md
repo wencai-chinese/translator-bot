@@ -1,8 +1,10 @@
+# Wencai Translator Bot
+
 A very basic translator bot that will translate everything you say into Chinese. 
 Useful for bilingual communications. 
 Especially powerful when combined with bridges that can port over and synchronize your communications across multiple platforms like [WhatsApp](https://matrix.org/ecosystem/bridges/whatsapp/), [Telegram](https://matrix.org/ecosystem/bridges/telegram/) etc. into matrix.
 
-# Usage
+## Usage
 
 1. Fork or clone this repo.
 2. Setup the bot. 
@@ -10,7 +12,7 @@ Especially powerful when combined with bridges that can port over and synchroniz
 
 All text posted in the room will be spontaneously translated into Chinese. 
 
-# What you need
+## What you need
 
 1. A matrix account. Get one [for free](https://matrix.org/try-matrix/).
 2. A separate matrix account for the bot.
@@ -25,9 +27,9 @@ All text posted in the room will be spontaneously translated into Chinese.
 When running locally, store the above as environment variables in a `.env` file. 
 When running on Github, store the above as actions [secrets](translator-bot/settings/secrets/actions).
 
-# Setup
+## Setup
 
-## Locally
+### Locally
 
 Run in terminal:
 
@@ -37,6 +39,6 @@ npm run build
 node dist/basic-bot.js
 ```
 
-## On Github
+### On Github
 
 Start a new workflow with [this file](.github/workflows/deploy.yml) in the repo.
