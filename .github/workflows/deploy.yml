@@ -8,6 +8,7 @@ on:
 jobs:
   deploy:
     runs-on: ubuntu-latest
+    environment: DeployBot
 
     steps:
     - name: Checkout Repository
